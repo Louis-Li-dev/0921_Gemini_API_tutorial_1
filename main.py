@@ -6,7 +6,7 @@ import json
 from dotenv import load_dotenv
 load_dotenv()
 app = Flask(__name__)
-api_key = os.getenv("api_key")
+api_key = os.environ.get("api_key")
 
 genai.configure(api_key=api_key)
 generation_config = {
